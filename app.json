@@ -1,0 +1,62 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/history/history",
+    "pages/contant/contant",
+    "pages/salaryTrial/selectCity/selectCity",
+    "pages/salaryTrial/trialType/trialType",
+    "pages/salaryTrial/selectSS/selectSS",
+    "pages/salaryTrial/setSS/setSS",
+    "pages/salaryTrial/selectWelfare/selectWelfare",
+    "pages/salaryTrial/setWelfare/setWelfare",
+    "pages/salaryTrial/addStaff/addStaff",
+    "pages/salaryTrial/result/result",
+    "pages/salaryTrial/personDetail/personDetail",    
+    "pages/individualTrials/calculator/calculator",
+    "pages/individualTrials/calculationResults/calculationResults",
+    "pages/residualBenefits/selectCity/selectCity",
+    "pages/residualBenefits/calculation/calculation",
+    "pages/residualBenefits/calculationResults/calculationResults"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "优企宝",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "    "
+    }
+  },
+  "tabBar":{
+    "color":"#C9C9C9",
+    "selectedColor":"#4F77F0",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"开始试算",
+        "iconPath":"images/begin-gray.png",
+        "selectedIconPath":"images/begin-blue.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史试算",
+        "iconPath": "images/history-gray.png",
+        "selectedIconPath": "images/history-blue.png"
+      },
+      {
+        "pagePath": "pages/contant/contant",
+        "text": "联系我们",
+        "iconPath": "images/contact-gray.png",
+        "selectedIconPath": "images/contact-blue.png"
+      }
+    ]
+
+
+  },
+  "sitemapLocation": "sitemap.json"
+}

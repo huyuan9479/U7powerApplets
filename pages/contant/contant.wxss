@@ -1,0 +1,109 @@
+/* pages/contant/contant.wxss */
+.box .banner{
+  width:100%;
+  height:402rpx;
+}
+.box .title{
+  margin-top:82rpx;
+  font-size:38rpx;
+  color:#495060;
+  text-align: center;
+  font-weight: bold;
+  position:relative;
+}
+.box .title::after{
+  content: "";
+  display: block;
+  width:122rpx;
+  height:6rpx;
+  background:#267FF8;
+  position:absolute;
+  bottom:-22rpx;
+  left:50%;
+  margin-left:-61rpx;
+}
+.box .introduce{
+  width:calc(100% - 100rpx);
+  margin:0 auto;
+  margin-top:80rpx;
+  font-size:30rpx;
+  color:#495060;
+  line-height:48rpx;
+  text-align-last:left;
+  text-align:justify;
+}
+.box .map{
+  width:100%;
+  height:430rpx;
+  text-align: center;
+  margin-bottom:94rpx;
+  margin-top:16rpx;
+  box-sizing: border-box;
+}
+.box .map image{
+  width:600rpx;
+  height:430rpx;
+}
+.box .info{
+  width:100%;
+  height:326rpx;
+  background:#202228;
+  padding-top:90rpx;
+  box-sizing: border-box;
+}
+.box .info .text{
+  float:left;
+  margin-left:80rpx;
+  font-size:28rpx;
+  color:#fff;
+}
+.box .info .text view:not(:first-child){
+  margin-top:32rpx;
+}
+.box .info .img{
+  float:right;
+  margin-right:74rpx;
+  width:172rpx;
+  height:172rpx;
+}
+.box .info .img image{
+  width:172rpx;
+  height:172rpx;
+}
+.box .bigImg{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.7);
+  color:#fff;
+  text-align: center;
+}
+.box .bigImg .close{
+  width:52rpx;
+  height:52rpx;
+  position:absolute;
+  top:50rpx;
+  right:50rpx;
+}
+.box .bigImg .tit{
+  margin-top:260rpx;
+  font-size:32rpx;
+  
+}
+.box .bigImg .erweima{
+  width:344rpx;
+  height:344rpx;
+  margin:44rpx 0 80rpx  0;
+}
+.box .bigImg .btn,.box .bigImg .authorization{
+  width:228rpx;
+  line-height:88rpx;
+  color:#fff;
+  font-size:34rpx;
+  margin:0 auto;
+  border:1rpx solid #FFFFFF;
+  border-radius: 6rpx;
+  background:rgba(0,0,0,0)
+}

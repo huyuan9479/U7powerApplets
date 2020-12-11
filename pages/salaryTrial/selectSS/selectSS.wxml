@@ -1,0 +1,40 @@
+<!--pages/selectSS/selectSS.wxml-->
+<view class="selectSS">
+  <view class="location">
+    <image src="../../../images/city.png"></image>
+    <text>{{city}}</text>
+    <view class="selet" bindtap="selShow">{{socialName}}</view>
+    <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{soicalList}}" class="selet" range-key="policyName"  wx:if="{{!noData}}">
+    <view class="picker">
+      社保方案：{{soicalList[index].policyName}}
+    </view>
+  </picker> -->
+  
+  </view>
+  <view class="nodata" wx:if="{{noData}}">暂无数据</view>
+  <view wx:else>
+    <view class="project">
+      <view class="item" wx:for="{{list}}" wx:key="{{item.productCode}}" data-index="{{index}}" 
+      bindtap="clickItem">
+        <view class="name">{{item.schemeName}}</view>
+        <view class="icon">
+          <icon type="success" color="#4F77F0" wx:if="{{item.checked}}" />
+          <view class="circle" wx:else></view>
+        </view>
+      </view>
+    </view>
+    <view class="nextBtn" bindtap="nextSetSS">下一步</view>
+  </view>
+</view>
+<view class="hideSel" wx:if="{{hide}}">
+  <view class="content" style="height:{{height}}">
+    <scroll-view
+      scroll-y
+      style="height:{{height}}" 
+      class="cont"  
+    >
+      <view class="{{index == i ? 'selBg' :''}}" wx:for="{{soicalList}}" wx:key="{{index}}" data-index="{{index}}" bindtap="bindPickerChange">{{soicalList[index].policyName}}</view>
+    </scroll-view>
+  </view>
+    
+  </view>

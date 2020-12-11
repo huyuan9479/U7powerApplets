@@ -1,0 +1,20 @@
+<!--pages/salaryTrial/trialType/trialType.wxml-->
+<view class="trialType">
+  <view class="location">
+    <image src="../../../images/city.png"></image>
+    <text>{{city}}</text>
+  </view>
+  <view>
+    <view class="project">
+      <view class="item" wx:for="{{list}}" wx:key="{{item.type}}" data-index="{{index}}" data-type="{{item.type}}" 
+      bindtap="clickItem">
+        <view class="name">{{item.name}}</view>
+        <view class="icon">
+          <icon type="success" color="#4F77F0" wx:if="{{item.checked}}" />
+          <view class="circle" wx:else></view>
+        </view>
+      </view>
+    </view>
+    <view class="nextBtn" bindtap="nextSelectSS">下一步</view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/calculator/calculator.wxml-->
+  <view class="box">
+    <text>月开票金额</text>
+    <input placeholder="请输入金额" focus="true" type="digit" bindinput="changeInput" bindblur="getMoney" placeholder-style="font-size:32rpx;color:#C0C4CC"/>
+  </view>
+<view class="sure" bindtap="confirm">确定</view>

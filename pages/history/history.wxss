@@ -1,0 +1,77 @@
+page{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.itemBox{
+  overflow: hidden;
+  height:180rpx;
+  position:relative;
+}
+.itemBox .item{
+  width:100%;
+  height:180rpx;
+  border-bottom:1rpx solid #eee;
+  position:absolute;
+  top:0;
+  z-index: 2;
+  transition:0s ease-in-out;
+}
+.itemBox .item .mark{
+  width:100%;
+  height:180rpx;
+  background:rgba(0,0,0,0);
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:2;
+}
+.itemBox .item::after{
+  content:"";
+  display:block;
+  width:100%;
+  height:1rpx;
+  background: #eee;
+  position:absolute;
+  left:0;
+}
+.itemBox .cont{
+  width:100%;
+  height:180rpx;
+  position:absolute;
+  left:0;
+  display: flex;
+}
+.itemBox .cont .time,.itemBox .cont .money{
+  flex:1;
+  font-size: 30rpx;
+  color:#606266;
+}
+.itemBox .cont .name{
+  margin-top:40rpx;
+  margin-bottom:14rpx;
+}
+.itemBox .cont .time .name{
+  font-weight: bold;
+  color:#303133;
+}
+.itemBox .cont .money .name{
+  color:#AAADB4;
+}
+.itemBox .del{
+  width:160rpx;
+  line-height: 182rpx;
+  background:#ED3F14;
+  font-size:34rpx;
+  color:#fff;
+  text-align:center;
+  position:absolute;
+  right:-160rpx;
+  z-index: 5;
+}
+.nodata{
+  width:100%;
+  font-size:34rpx;
+  color:#C0C4CC;
+  text-align: center;
+  margin-top:200rpx;
+}

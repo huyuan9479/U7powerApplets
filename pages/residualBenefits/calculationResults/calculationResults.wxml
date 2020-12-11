@@ -1,0 +1,61 @@
+<!--pages/calculationResults/calculationResults.wxml-->
+<wxs module="numberUtil" src="../../../utils/toFixed.wxs"></wxs>
+<view class="resultBox">
+  <view class="item">
+    <text>共减免金额</text><text class="fontColor">(不含服务费)</text>
+    <text class="money">{{allReduce}}</text>
+  </view>
+  <view class="line"></view>
+  <view class="echarts">
+    <view class="title">优化前后需缴纳残保金对比柱状图</view>
+    <view class="histogram">
+      <view class="legend">
+        <view>优化前</view>
+        <view>优化后</view>
+      </view>
+      <ec-canvas id="histogram-chart" canvas-id="company" ec="{{ ec }}"></ec-canvas>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="sumBox">
+    <view class="title" style="margin-bottom:30rpx">具体方案解析</view>
+    <view class="item">
+        <view class="bold">公司总人数</view>
+        <view class="num">{{totalPeople}}人</view>
+    </view>
+    <view class="item">
+      <view class="bold" wx:if="{{baseNum=='1'}}">企业平均工资</view>
+        <view class="bold" wx:else>人均社保缴纳基础</view>
+        <view class="num">{{amount}}</view>
+    </view>
+  </view>
+  
+  <view class="txt">
+    <view class="before">
+      <view class="tit">优化前残保金总共支出：</view>
+      <view class="fose28" wx:if="{{baseNum=='1'}}">{{'（职工总人数*'+ rate +'%-已雇佣残障人士人数）*企业平均工资'}}</view>
+      <view class="fose28" wx:else>{{'（职工总人数*' + rate +'%-已雇佣残障人士人数）*人均社保缴纳基数'}}</view>
+      <view>{{'=【' + totalPeople + '*' + rate + '%(' + cityName  + ')-' + disabledNum + '】*' + amount + '*12'}}</view>
+      <view>=<text class="number">{{optimizedBefore}}</text></view>
+    </view>
+    <view class="after">
+      <view class="tit">优化后残保金总共支出：</view>
+      <view class="fose28"><text class="icon">①</text>年度需雇佣残疾人：</view>
+      <view>{{totalPeople + '【年均人数】*' + rate + '%*12【月份】=' + firstMonth + '月'}}</view>
+      <view class="fose16"><text class="icon">②</text>雇佣1-2级别残疾人（1-2级别残疾人可相当于两个轻度残疾人人数）：</view>
+      <view>{{firstMonth + '/2=' + half + '月——即 ' + secondMonth + '个月【雇佣一名1-2级别残疾人】'}}</view>
+      <view class="fose16"><text class="icon">③</text>支付残疾人成本【不含服务费】：</view>
+      <view>{{'【' + basicWage + '(各城市最低基本工资)+' + fiveInsurance + '五险(当地人力社保部门公布的最低缴费基数)】*' + secondMonth}}</view>
+      <view>{{'=' + costAmount + '元/月*' + secondMonth}}</view>
+      <view>=<text class="number">{{optimizedAfter}}元</text></view>
+    </view>
+  </view>
+  <!-- <view class="bg"></view> -->
+  <!-- <view class="btn">
+    <view class="share">
+      <button open-type='share' plain="true">分享</button>
+    </view>
+    <view class="again" bindtap="again">再算一次</view>
+  </view> -->
+</view>
+

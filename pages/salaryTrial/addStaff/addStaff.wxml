@@ -1,0 +1,47 @@
+<!--pages/addStaff/addStaff.wxml-->
+<view class="addStaff">
+    <view class="title">
+      <view>姓名</view>
+      <view wx:if="{{type=='52150'}}">税前工资</view>
+      <view wx:elif="{{type=='52151'}}">到手工资</view>
+      <view wx:else>企业负担</view>
+      <view>操作</view>
+    </view>
+    <view class="staffList" wx:for="{{staffList}}" wx:key="{{index}}">
+      <view class="name">{{item.name ? item.name : "-"}}</view>
+      <view wx:if="{{type=='52150'}}">￥{{item.grossPay}}</view>
+      <view wx:elif="{{type=='52151'}}">￥{{item.toGetSalary}}</view>
+      <view wx:elif="{{type=='52152'}}">￥{{item.enterpriseBurden}}</view>
+      <view class="del" bindtap="delStaff" data-id="{{item.id}}"><image src="../../../images/del.png"></image></view>
+    </view>
+    <view class="addBtn" bindtap="add">
+      <image src="../../../images/plus-circle.png"></image>
+      <text>添加人员</text>
+    </view>
+    <view class="nextBtn" bindtap="result">下一步</view>
+</view>
+
+<view class="add" wx:if="{{add}}" style="height:{{height}}">
+  <view class="name">
+    <text>员工姓名</text>
+     <input placeholder="请输入姓名" focus="true" bindblur="getName" placeholder-style="font-size:32rpx;color:#C0C4CC"/>
+  </view>
+  <view class="money">
+    <text wx:if="{{type=='52150'}}">税前工资</text>
+    <text wx:elif="{{type=='52151'}}">到手工资</text>
+    <text wx:else>企业负担</text>
+    <input placeholder="请输入金额" type="digit" placeholder-style="font-size:32rpx;color:#C0C4CC" bindinput="getSalary"/>
+    <text class="icon">￥</text>
+  </view>
+  <view class="money" wx:if="{{type=='52151'}}">
+    <text>社保基数</text>
+    <input placeholder="请输入金额" type="digit" placeholder-style="font-size:32rpx;color:#C0C4CC" bindinput="getSS"/>
+    <text class="icon">￥</text>
+  </view>
+  <view class="money" wx:if="{{type=='52151'}}">
+    <text>公积金基数</text>
+    <input placeholder="请输入金额" type="digit" placeholder-style="font-size:32rpx;color:#C0C4CC" bindinput="getProvident"/>
+    <text class="icon">￥</text>
+  </view>
+  <view class="caveBtn" bindtap="addStaff">保存</view>
+</view>

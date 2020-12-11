@@ -1,0 +1,45 @@
+<!--pages/index/index.wxml-->
+
+<!-- <image class="logo" src="../../images/bg.png"></image>
+<image class="pic" src="../../images/picture.png"></image>
+<image class="bgPic" src="../../images/background.jpg"></image>
+<view class="box" style="height:{{height}}">
+  <view class="btn">
+    <view class="begin" bindtap="start">薪酬试算</view>
+    <view class="begin calculator" bindtap="calculator">个独计算</view>
+    <view class="history" bindtap="history">历史试算</view>
+  </view>
+</view> -->
+<view>
+  <view class="bg">
+    <image class="namePic" src="../../images/name@2x.png"></image>
+    <image class="picture" src="../../images/bg.png"></image>
+    <text>降低企业成本，提高员工所得</text>
+  </view>
+  <view class="cont">
+    <view class="children">
+      <image src="../../images/one@2x.png"></image>
+      <view class="right"> 
+        <text class="tit">薪酬试算</text>
+        <view class="sumup">一键获取最优薪酬方案</view>
+        <view class="btn" bindtap="start">开始试算</view>
+      </view>
+    </view>
+    <view class="children">
+      <image src="../../images/two@2x.png"></image>
+      <view class="right"> 
+        <text class="tit">个独计算</text>
+        <view class="sumup">合理合法「节税70%」</view>
+        <view class="btn" bindtap="individual">开始试算</view>
+      </view>
+    </view>
+    <view class="children">
+      <image src="../../images/three@2x.png"></image>
+      <view class="right"> 
+        <text class="tit">残保金计算</text>
+        <view class="sumup">义务保障残疾人权益</view>
+        <view class="btn" bindtap="residualBenefits">开始试算</view>
+      </view>
+    </view>
+  </view>
+</view>

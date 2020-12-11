@@ -1,0 +1,50 @@
+/* pages/selectCity/selectCity.wxss */
+.nodata{
+  margin:160rpx auto;
+  font-size:34rpx;
+  color:#C0C4CC;
+  text-align: center;
+}
+.garyBg{
+  background:#F5F5F9;
+  padding:30rpx;
+}
+.garyBg .city{
+  display:inline-block;
+  width:180rpx;
+  padding:0 10rpx;
+  line-height:70rpx;
+  text-align: center;
+  font-size:28rpx;
+  color:#303133;
+  background:#fff;
+  border:1rpx solid #DDDDDD;
+  border-radius: 4rpx;
+  margin-right:20rpx;
+  margin-bottom:20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+/* .initial{
+  background:#fff;
+}
+.initial .classify{
+  line-height:60rpx;
+  padding-left:30rpx;
+  background:#F5F5F9;
+  font-size:26rpx;
+  color:#909399;
+  border-top:1rpx solid #E6E6E6;
+  border-bottom:1rpx solid #E6E6E6;
+}
+.initial .downtown{
+  margin-left:30rpx;
+  line-height:88rpx;
+  font-size:34rpx;
+  color:#303133;
+  border-bottom:1rpx solid #E6E6E6;
+}
+.initial .downtown:last-child{
+  border:none;
+} */

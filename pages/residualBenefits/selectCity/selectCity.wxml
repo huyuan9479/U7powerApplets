@@ -1,0 +1,21 @@
+<!--pages/selectCity/selectCity.wxml-->
+
+<!-- <scroll-view
+  scroll-y
+  style="{{height}}"
+  bindscroll="scroll"
+  scroll-into-view="{{toView}}" 
+> -->
+
+  <!-- <view class="nodata" wx:if="{{!cityList.length}}">暂无数据</view>
+  <view  wx:else>
+    <view class="garyBg">
+      <view class="city" bindtap="selectSS" wx:for="{{cityList}}" wx:key="{{item.areaId}}" data-info="{{item}}">{{item.areaName}}</view>
+  </view> -->
+  <view class="nodata" wx:if="{{!cityList.length}}">暂无数据</view>
+  <view class="garyBg" wx:else  style="min-height:{{height}}">
+    <view class="city" bindtap="selectSS" wx:for="{{cityList}}" wx:key="{{item.cityId}}" data-info="{{item}}">{{item.cityName}}</view>
+  </view>
+<!-- </scroll-view> -->
+
+

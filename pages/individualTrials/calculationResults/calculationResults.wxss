@@ -1,0 +1,145 @@
+/* pages/calculationResults/calculationResults.wxss */
+.resultBox .item{
+  height:124rpx;
+  line-height:124rpx;
+  font-size:32rpx;
+  color:#303133;
+  border-top:2rpx solid #eee;
+  padding:0 30rpx;
+}
+.resultBox .item text:not(.money){
+  float:left;
+}
+.resultBox .item .money{
+  color:#606266;
+  float:right;
+  /* text-align: right; */
+}
+.resultBox .line{
+  width:100%;
+  height:16rpx;
+  background:#fafafa;
+}
+.resultBox .echarts{
+  padding:48rpx 30rpx;
+}
+.resultBox .echarts .title{
+  color:#333;
+  font-size:34rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.resultBox .echarts .histogram{
+  margin:0 auto;
+  width:570rpx;
+  height:500rpx;
+  position:relative;
+}
+.resultBox .echarts .histogram .legend{
+  position:absolute;
+  top:28rpx;
+  right:0;
+  font-size:24rpx;
+  color:#909399;
+}
+.resultBox .echarts .histogram .legend view{
+  position:relative;
+}
+.resultBox .echarts .histogram .legend view::before{
+  content:'';
+  position:absolute;
+  width:24rpx;
+  height:24rpx;
+  top:6rpx;
+  left:-34rpx;
+}
+.resultBox .echarts .histogram .legend view:first-child::before{
+  background: #3AA0FF;
+}
+.resultBox .echarts .histogram .legend view:last-child::before{
+  background: #4ECB73;
+}
+.resultBox .echarts .pieChart{
+    width:100%;
+    height:500rpx;
+}
+.resultBox .cont{
+  height:58rpx;
+  line-height: 58rpx;
+  text-align: center;
+  font-size:30rpx;
+  color:#303133;
+}
+.resultBox .tit{
+  color:#909399;
+}
+.resultBox .content{
+  padding:30rpx;
+}
+.resultBox .cont view{
+  width:calc( (100% - 210rpx) / 3);
+  float:left;
+}
+.resultBox .cont .name{
+  width:210rpx;
+  text-align: left;
+}
+.resultBox .pielegend,.resultBox .sum{
+  font-size: 28rpx;
+}
+.resultBox .pielegend text{
+  display: inline-block;
+  width:24rpx;
+  height:24rpx;
+  margin-right:18rpx;
+}
+.resultBox .sumBox{
+  padding:40rpx 30rpx;
+}
+.resultBox .sum{
+  height:58rpx;
+  line-height: 58rpx;
+  font-weight: bold;
+  color:#303133;
+}
+.resultBox .sum .bold{
+  float:left;
+}
+.resultBox .sum .num{
+  float:right;
+}
+.resultBox .txt{
+  padding:32rpx 96rpx;
+  text-align: center;
+  font-size:24rpx;
+  color:#303133;
+  background:#fafafa;
+}
+.resultBox .btn{
+  width:100%;
+  height:70rpx;
+  padding:20rpx 0;
+  background:rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.resultBox .btn view{
+  width:260rpx;
+  line-height:70rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  font-size:32rpx;
+  color:#fff;
+}
+.resultBox .btn .share button{
+  border:none;
+  background:#067EFF;
+  font-size:32rpx;
+  color:#fff;
+  line-height:70rpx;
+}
+.resultBox .btn .again{
+  line-height:68rpx;
+  border:1rpx solid #fff;
+}

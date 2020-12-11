@@ -1,0 +1,29 @@
+/* pages/calculator/calculator.wxss */
+.box{
+  height:92rpx;
+  line-height:92rpx;
+  margin:110rpx 50rpx;
+  border-bottom:2rpx solid #E6E6E6;
+  font-size:32rpx;
+  color:#606266;
+}
+.box text{
+  float:left;
+}
+.box input{
+  height:92rpx;
+  line-height:92rpx;
+  float:right;
+  text-align: right;
+}
+.sure{
+  width:296rpx;
+  line-height:88rpx;
+  font-size:34rpx;
+  color:#FFFFFD;
+  text-align: center;
+  border-radius: 44rpx;
+  background:linear-gradient(#8F9CFF, #496DEC);
+  box-shadow:0 2rpx 20rpx 0 rgba(52,47,255,0.5);
+  margin:220rpx auto;
+}

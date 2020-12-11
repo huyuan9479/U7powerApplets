@@ -1,0 +1,21 @@
+<!--pages/residualBenefits/calculation/calculation.wxml-->
+  <view class="box">
+   <view class="item">
+      <text>职工总人数</text>
+      <input placeholder="请输入人数" focus="true" type="number" bindinput="changeInput" bindinput="getTotalPeople" placeholder-style="font-size:32rpx;color:#C0C4CC"/>
+   </view>
+    <view class="item">
+      <text>{{baseNum=='1' ? '企业平均工资' : '人均社保缴纳基数'}}</text>
+      <input placeholder="请输入数值" type="digit" bindinput="changeInput" bindinput="getAmount" placeholder-style="font-size:32rpx;color:#C0C4CC"/>
+    </view>
+    <view class="item">
+      <text>已有残疾人数</text>
+      <input placeholder="请输入人数" type="number" bindinput="changeInput" bindinput="getDisabledNum" placeholder-style="font-size:32rpx;color:#C0C4CC"/>
+    </view>
+  </view>
+  <view class="text">
+    <text>*计算公式：</text>
+    <view class="formula" wx:if="{{baseNum=='1'}}">{{'(职工总人数*'+ rate +'%-已雇佣残障人士人数)*企业平均工资'}}</view>
+    <view class="formula" wx:else>{{'(职工总人数*' + rate +'%-已雇佣残障人士人数)*人均社保缴纳基数'}}</view>
+  </view>
+<view class="sure" bindtap="confirm">计算</view>

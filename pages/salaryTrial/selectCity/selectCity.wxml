@@ -1,0 +1,50 @@
+<!--pages/selectCity/selectCity.wxml-->
+
+<scroll-view
+  scroll-y
+  style="{{height}}"
+  bindscroll="scroll"
+  scroll-into-view="{{toView}}" 
+>
+  <view class="search">
+     <input 
+     style="width:{{width}}"
+     placeholder-class="placeholderStyle"
+     bindfocus="inputFocus"
+     bindinput="searchConfirm"
+     placeholder="输入城市名、拼音或首字母查询"
+     confirm-type="search"
+     focus="{{focus}}"
+     value="{{keyword}}" />
+     <image src="../../../images/search_address.png"></image>
+     <icon bindtap="delSearch" type="clear" size="14" wx:if="{{delBtn}}"/>
+     <text bindtap="cancel" wx:if="{{cancelText}}" >取消</text>
+  </view>
+  <view class="mark" wx:if="{{mark}}" catchtouchmove="true"></view>
+  <view class="mark searchList" wx:if="{{keyword}}">
+    <view class="list" wx:for="{{searchList}}" wx:key="{{item.areaId}}" data-info="{{item}}"  bindtap="selectSS">{{item.areaName}}</view>
+    <view class="nodata" wx:if="{{!searchList.length}}">暂无数据</view>
+  </view>
+  <view  wx:else>
+    <view class="garyBg">
+      <view class="tit" id="present">你所在的地区</view>
+      <view class="city" wx:if="{{noInfo}}">定位失败</view>
+      <view class="city" bindtap="selectSS" wx:for="{{locationCity}}" wx:key="{{item.areaId}}" data-info="{{item}}" wx:if="{{!noInfo}}">{{item.areaName}}</view>
+      <view wx:if="{{historyCity != null}}">
+        <view class="tit" id="history">历史访问的城市</view>
+        <view class="city" bindtap="selectSS" wx:for="{{historyCity.areas}}" wx:key="{{item.areaId}}" data-info="{{item}}">{{item.areaName}}</view>
+      </view>
+      <view class="tit" id="hot">热门城市</view>
+      <view class="city" bindtap="selectSS" wx:for="{{hotCity}}" wx:key="{{item.areaId}}" data-info="{{item}}">{{item.areaName}}</view>
+    </view>
+    <view class="initial" wx:for="{{cityList}}" wx:key="{{index}}">
+      <view  class="classify" id="{{item.type}}">{{item.type}}</view>
+      <view class="downtown" wx:for="{{item.list}}" wx:key="{{index}}" wx:for-item="c" bindtap="selectSS" data-info="{{c}}">{{c.areaName}}</view>
+    </view>
+  </view>
+  <view class="btn"  wx:if="{{!keyword}}">
+    <view wx:for="{{btn}}" wx:key="{{index}}" bindtap="clickBtn" data-id="{{item.id}}">{{item.type}}</view>
+  </view>
+</scroll-view>
+
+

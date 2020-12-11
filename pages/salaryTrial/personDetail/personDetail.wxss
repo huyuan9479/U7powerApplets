@@ -1,0 +1,167 @@
+/* pages/personDetail/personDetail.wxss */
+.result{
+  /* padding:0 30rpx; */
+  /* padding-bottom:110rpx; */
+}
+.result .location{
+  text-align: center;
+  padding:40rpx 0 50rpx 0;
+}
+.result .location image{
+  width:34rpx;
+  height:34rpx;
+  margin-right:12rpx;
+}
+.result .location text{
+  font-size:34rpx;
+  color:#303133;
+}
+.result .histogram{
+  width:100%;
+  margin-top:52rpx;
+  display: flex;
+  position:relative;
+}
+.result .histogram .staff,.result .histogram .company{
+  width:50%;
+  height:380rpx;
+  flex:1;
+  position:relative;
+}
+.result .histogram .staff::after{
+  content:"";
+  display: block;
+  width:1rpx;
+  height:380rpx;
+  background:#E6E6E6;
+  position:absolute;
+  top:0;
+  right:0;
+}
+.result .histogram .tit{
+  width:100%;
+  text-align: center;
+  font-size:34rpx;
+  font-weight: bold;
+  color:#333;
+  position:absolute;
+  top:0;
+}
+.result .histogram .cont{
+  box-sizing:border-box;
+  padding:0 30rpx;
+  width:100%;
+  text-align: center;
+  font-size:30rpx;
+  font-weight: bold;
+  position:absolute;
+  bottom:0;
+}
+.result .histogram .cont text{
+  display: inline-block;
+  width:50%;
+}
+.result .histogram .cont .name{
+  margin-top:4rpx;
+  font-size:24rpx;
+  font-weight: normal;
+}
+.result .histogram .cont text:first-child{
+  color:#909399;
+}
+.result .line{
+  padding:0 40rpx;
+  height:108rpx;
+  position:relative;
+}
+.result .line::after{
+  content:"";
+  display: block;
+  width:calc(100% - 80rpx);
+  height:2rpx;
+  background:#E6E6E6;
+  position:absolute;
+  top:60rpx;
+}
+.result .bg{
+  width:100%;
+  height:20rpx;
+  background:#f5f5f5;
+}
+.result .wages{
+  color:#303133;
+  padding:46rpx 30rpx 28rpx 30rpx;
+}
+.result .wages .info{
+  display: flex;
+}
+.result .wages .info>view{
+  flex:1;
+  font-size:30rpx;
+}
+.result .wages .name{
+  font-weight: bold;
+}
+.result .wages .title{
+  margin:24rpx 0;
+  color:#909399;
+}
+.result .wages .title .name{
+  color:#303133;
+}
+.result .wages .info{
+  margin-bottom:16rpx;
+}
+.result .wages .info .tit{
+  color:#909399;
+}
+.result .wages .info .green{
+  color:#4ECB73;
+}
+.result .wages .info .orange{
+  color:#FFBA24;
+}
+
+.result .perTax{
+  width:100%;
+  height:640rpx;
+}
+.result .detail{
+  padding-bottom:68rpx;
+}
+.result .detail .title,.result .detail .cont{
+  width:80%;
+  margin:0 auto;
+  text-align: center;
+  display: flex;
+}
+.result .detail .title{
+  font-size:30rpx;
+  color:#909399;
+}
+.result .detail .cont{
+  font-size:28rpx;
+  color:#303133;
+  margin-top:18rpx;
+  position:relative;
+}
+.result .detail .title view,.result .detail .cont view{
+  flex:1;
+}
+.result .detail .cont text{
+  position:absolute;
+  width:24rpx;
+  height:24rpx;
+  top:8rpx;
+  left:-16rpx;
+}
+.result .contact{
+  width:100%;
+  height:214rpx;
+  background:#F5F5F5;
+  font-size:30rpx;
+  color:#4F71ED;
+  text-align:center;
+  padding-top:56rpx;
+  box-sizing: border-box;
+}

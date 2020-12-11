@@ -1,0 +1,114 @@
+/* pages/addStaff/addStaff.wxss */
+.addStaff .title{
+  width:100%;
+  height:92rpx;
+  line-height:92rpx;
+  background:#FAFAFA;
+  font-size:32rpx;
+  color:#606266;
+  text-align: center;
+}
+.addStaff .title view,.addStaff .staffList view{
+  width:calc(100% / 3);
+  float:left;
+}
+.addStaff .title view:first-child{
+  width:calc(100% / 3 - 30rpx);
+  padding-left:30rpx;
+  text-align: left;
+}
+.addStaff .staffList{
+  width:100%;
+  height:120rpx;
+  line-height:120rpx;
+  border-bottom:1rpx solid #eee;
+  font-size:34rpx;
+  text-align: center;
+  color:#303133;
+}
+.addStaff .staffList .name{
+  width:calc(100% / 3 - 30rpx);
+  padding-left:30rpx;
+  font-size:32rpx;
+  text-align: left;
+}
+.addStaff .staffList .del image{
+  width:48rpx;
+  height:48rpx;
+  vertical-align: middle;
+}
+.addStaff .addBtn{
+  padding-top:56rpx;
+  padding-left:30rpx;
+  font-size:32rpx;
+  color:#4D71F0;
+}
+.addStaff .addBtn image{
+  width:30rpx;
+  height:30rpx;
+  margin-right:8rpx;
+  vertical-align:-4rpx;
+}
+.addStaff .nextBtn{
+  width:296rpx;
+  line-height:88rpx;
+  font-size:34rpx;
+  color:#FFFFFD;
+  text-align: center;
+  border-radius: 44rpx;
+  background:linear-gradient(#8F9CFF, #496DEC);
+  box-shadow:0 2rpx 20rpx 0 rgba(52,47,255,0.5);
+  position:fixed;
+  left:50%;
+  margin-left:-148rpx;
+  bottom:90rpx;
+}
+
+
+.add{
+  width:100%;
+  box-sizing: border-box;
+  padding:0 50rpx;
+  padding-top:62rpx;
+  background:#fff;
+  position:fixed;
+  top:0;
+  left:0;
+}
+.add .name,.add .money{
+  width:100%;
+  height:120rpx;
+  line-height: 120rpx;
+  font-size:32rpx;
+  color:#606266;
+  border-bottom:1rpx solid #eee;
+}
+.add .money{
+  position:relative;
+}
+.add text{
+  float:left;
+}
+.add input{
+  float:right;
+  width:180rpx;
+  padding-top:36rpx;
+}
+.add .icon{
+  font-size:32rpx;
+  color:#C0C4CC;
+  position:absolute;
+  right:180rpx;
+  top:3rpx;
+}
+.add .caveBtn{
+  width:296rpx;
+  line-height:88rpx;
+  font-size:34rpx;
+  color:#FFFFFD;
+  text-align: center;
+  border-radius: 44rpx;
+  background:linear-gradient(#8F9CFF, #496DEC);
+  box-shadow:0 2rpx 20rpx 0 rgba(52,47,255,0.5);
+  margin:100rpx auto;
+}

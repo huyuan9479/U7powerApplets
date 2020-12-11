@@ -1,0 +1,45 @@
+<!--pages/setWelfare/setWelfare.wxml-->
+<view class="setSS">
+  <view class="title">
+    <view>社保项目</view>
+    <view>缴纳比例</view>
+    <view>比例范围</view>
+  </view>
+  <view class="cont" wx:for="{{list}}" wx:key="{{priority}}">
+    <view class="name">{{item.itemName}}</view>
+    <view class="ratio">
+      <input bindinput="getNatural" placeholder="{{placeholder}}" value="{{natural}}" type='digit'  wx:if="{{item.itemCode == 'natural'}}" disabled='{{type=="52151"}}'/>
+      <picker wx:else bindchange="bindPickerChange" value="{{item.index}}" range="{{item.list}}" class="select" data-item="{{item}}">
+        <view class="picker">
+          <text>{{item.list[item.index]}}</text>
+          <image src="../../../images/shape.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="personal" wx:if="{{item.itemCode == 'natural'}}">元 / 月</view>
+    <view class="personal" wx:else>{{item.minMax}}</view>
+  </view>
+  <!-- <view class="cont">
+    <view class="name">养老保险</view>
+    <view class="ratio">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="select">
+        <view class="picker">
+         {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="personal">8%</view>
+  </view>
+  <view class="cont">
+    <view class="name">养老保险</view>
+    <view class="ratio">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="select">
+        <view class="picker">
+         {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="personal">8%</view>
+  </view> -->
+  <view class="nextBtn" bindtap="addStaff">下一步</view>
+</view>

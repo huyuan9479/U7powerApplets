@@ -1,0 +1,43 @@
+<!--pages/setSS/setSS.wxml-->
+<view class="setSS">
+  <view class="title">
+    <view>社保项目</view>
+    <view>企业缴纳</view>
+    <view>个人缴纳</view>
+  </view>
+  <view class="cont" wx:for="{{setList}}" wx:key="{{item.productCode}}">
+    <view class="name">{{item.schemeName}}</view>
+    <view class="ratio"> 
+      <picker bindchange="bindPickerChange" value="{{item.index}}" range="{{item.list}}" class="select" range-key="companyPercent" data-item="{{item}}">
+        <view class="picker">
+          <text>{{item.list[item.index].companyPercent}}</text>
+          <image src="../../../images/shape.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="personal">{{item.person}}</view>
+  </view>
+  <!-- <view class="cont">
+    <view class="name">养老保险</view>
+    <view class="ratio">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="select">
+        <view class="picker">
+         {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="personal">8%</view>
+  </view>
+  <view class="cont">
+    <view class="name">养老保险</view>
+    <view class="ratio">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="select">
+        <view class="picker">
+         {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="personal">8%</view>
+  </view> -->
+  <view class="nextBtn" bindtap="selectWelfare">下一步</view>
+</view>

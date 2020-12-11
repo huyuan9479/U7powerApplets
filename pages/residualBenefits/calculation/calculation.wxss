@@ -1,0 +1,43 @@
+/* pages/residualBenefits/calculation/calculation.wxss */
+.box{
+  margin:0 50rpx;
+  font-size:32rpx;
+  color:#606266;
+}
+.box .item{
+  padding-top:48rpx;
+  box-sizing: border-box;
+  height:120rpx;
+  border-bottom:2rpx solid #E6E6E6;
+}
+.box text{
+  float:left;
+}
+.box input{
+  /* height:92rpx;
+  line-height:92rpx; */
+  float:right;
+  text-align: right;
+}
+.text{
+  margin:0 50rpx;
+  font-size:24rpx;
+  color:#909399;
+  margin-top:20rpx;
+}
+.text .formula{
+  margin-top:6rpx;
+  font-size: 28rpx;
+  color:#333333;
+}
+.sure{
+  width:296rpx;
+  line-height:88rpx;
+  font-size:34rpx;
+  color:#FFFFFD;
+  text-align: center;
+  border-radius: 44rpx;
+  background:linear-gradient(#8F9CFF, #496DEC);
+  box-shadow:0 2rpx 20rpx 0 rgba(52,47,255,0.5);
+  margin:60rpx auto;
+}

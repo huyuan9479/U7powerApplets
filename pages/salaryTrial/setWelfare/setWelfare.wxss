@@ -1,0 +1,93 @@
+/* pages/setWelfare/setWelfare.wxss */
+.setSS .title{
+  width:100%;
+  height:92rpx;
+  line-height:92rpx;
+  background:#FAFAFA;
+  font-size:32rpx;
+  color:#606266;
+  text-align: center;
+  padding-left:30rpx;
+  box-sizing:border-box;
+}
+.setSS .title view{
+  float:left;
+  width:calc(100% / 3);
+}
+.setSS .title view:first-child{
+  text-align: left;
+}
+.setSS .cont{
+  height:120rpx;
+  line-height: 120rpx;
+  font-size:34rpx;
+  color:#606266;
+  text-align: center;
+  position:relative;
+}
+.setSS .cont::after{
+  content:"";
+  display: block;
+  width:100%;
+  height:1rpx;
+  background:#EEEEEE;
+  position:absolute;
+  left:0;
+  bottom:0;
+}
+.setSS .cont>view{
+  float:left;
+  width:calc(100% / 3);
+  box-sizing:border-box;
+  padding-left:30rpx;
+}
+.setSS .cont .name{
+  font-size:32rpx;
+  color:#303133;
+  text-align: left;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+.setSS .cont .ratio{
+  color:#303133;
+  text-align: left;
+  padding-left:50rpx;
+}
+.setSS .cont .ratio .select{
+  height:120rpx
+}
+.setSS .cont .ratio .picker ,.setSS .cont .ratio input{
+  width:100%;
+  height:120rpx;
+  padding-left:30rpx;
+  font-size:34rpx;
+  color:#303133;
+}
+.setSS .cont .ratio  .picker text{
+  float:left;
+}
+.setSS .cont .ratio  .picker image{
+  width:20rpx;
+  height:12rpx;
+  float:right;
+  margin-right:70rpx;
+  margin-top:54rpx;
+}
+.setSS .cont .ratio input{
+  width:calc(100% - 30rpx);
+}
+.setSS .nextBtn{
+  width:296rpx;
+  line-height:88rpx;
+  font-size:34rpx;
+  color:#FFFFFD;
+  text-align: center;
+  border-radius: 44rpx;
+  background:linear-gradient(#8F9CFF, #496DEC);
+  box-shadow:0 2rpx 20rpx 0 rgba(52,47,255,0.5);
+  position:fixed;
+  left:50%;
+  margin-left:-148rpx;
+  bottom:90rpx;
+}

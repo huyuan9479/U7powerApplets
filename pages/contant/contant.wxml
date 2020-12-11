@@ -1,0 +1,24 @@
+<!--pages/contant/contant.wxml-->
+<view class="box">
+  <image src="../../images/banner.jpg" class="banner"></image>
+  <view class="title">关于我们/ABOUT US</view>
+  <view class="introduce">上海优企宝人力资源管理有限公司以互联网技术为支撑，通过专业的企业服务SAAS软件，帮助企业制定薪酬管理、税优方案、弹性福利解决及费控方案等方面的专业化服务公司，为您提供定制化的员工薪酬福利方案！更精准的薪酬数据，合理管控企业用人成本！</view>
+  <view class="map"><image src="../../images/map.png"></image></view>
+  <view class="info">
+    <view class="text">
+      <view>电话：400-821-5121</view>
+      <view>官网：www.u7power.cn</view>
+      <view>邮箱：u7power@u7power.com</view>
+    </view>
+    <view class="img" bindtap="bigImg" wx:if="{{imgFlag}}">
+      <image src="../../images/tdcode.jpg"></image>
+    </view>
+  </view>
+  <view wx:if="{{!imgFlag}}" class="bigImg">
+    <image src="../../images/close.png" class="close" bindtap="cancel"></image>
+    <view class="tit">保存到手机，进行识别关注</view>
+    <image src="../../images/tdcode.jpg" class="erweima"></image>
+    <view class="btn" bindtap="savePhoto" wx:if="{{saveBtn}}">保存</view>
+    <button open-type="openSetting" bindopensetting="openSetting" wx:else class="authorization">去授权</button> 
+  </view>
+</view>

@@ -1,0 +1,241 @@
+/* pages/result/result.wxss */
+.result{
+  width:750rpx;
+  overflow: hidden;
+  /* padding:0 30rpx; */
+  /* padding-bottom:110rpx; */
+}
+.result .location{
+  text-align: center;
+  padding:40rpx 0 50rpx 0;
+}
+.result .location image{
+  width:34rpx;
+  height:34rpx;
+  margin-right:12rpx;
+}
+.result .location text{
+  font-size:34rpx;
+  color:#303133;
+}
+.result .histogram{
+  width:100%;
+  margin-top:52rpx;
+  display: flex;
+  position:relative;
+}
+.result .histogram .staff,.result .histogram .company{
+  width:50%;
+  height:380rpx;
+  flex:1;
+  position:relative;
+}
+.result .histogram .staff::after{
+  content:"";
+  display: block;
+  width:1rpx;
+  height:380rpx;
+  background:#E6E6E6;
+  position:absolute;
+  top:0;
+  right:0;
+}
+.result .histogram .tit{
+  width:100%;
+  text-align: center;
+  font-size:34rpx;
+  font-weight: bold;
+  color:#333;
+  position:absolute;
+  top:0;
+}
+.result .histogram .cont{
+  box-sizing:border-box;
+  padding:0 30rpx;
+  width:100%;
+  text-align: center;
+  font-size:30rpx;
+  font-weight: bold;
+  position:absolute;
+  bottom:0;
+}
+.result .histogram .cont text{
+  display: inline-block;
+  width:50%;
+}
+.result .histogram .cont .name{
+  margin-top:4rpx;
+  font-size:24rpx;
+  font-weight: normal;
+}
+.result .histogram .cont text:first-child{
+  color:#909399;
+}
+.result .slider{
+  padding:60rpx 40rpx;
+}
+.result .slider .changeInfo{
+  margin-top:20rpx;
+  font-size:24rpx;
+  color:#909399;
+  display: flex;
+}
+.result .slider .changeInfo>view{
+  flex:1;
+}
+.result .slider .changeInfo>view view:first-child{
+  margin-bottom:4rpx;
+}
+.result .slider .changeInfo .right{
+  text-align: right;
+} 
+.result .line{
+  width:100%;
+  height:20rpx;
+  background:#f5f5f5;
+}
+.result .detail{
+  color:#303133;
+  padding:46rpx 30rpx 28rpx 30rpx;
+}
+.result .detail .name{
+  font-weight: bold;
+}
+.result .detail .info{
+  display: flex;
+  font-size:30rpx;
+   margin-bottom:16rpx;
+}
+.result .detail .info view{
+  flex:1; 
+}
+.result .detail .title{
+  margin:24rpx 0;
+}
+.result .detail .title view,.result .detail .info .tit{
+  color:#909399;
+}
+.result .detail .title .name{
+  color:#303133;
+  font-weight: bold;
+}
+.result .detail .info .green{
+  color:#4ECB73;
+}
+.result .detail .info .orange{
+  color:#FFBA24;
+}
+/* .result .detail .info .green{
+  color:#4ECB73;
+}
+.result .detail .info .orange{
+  color:#FFBA24;
+} */
+
+.result .detail .more{
+  padding:10rpx 0 28rpx 0;
+  font-size:26rpx;
+  color:#4B6598;
+  text-align: center; 
+}
+.result .detail .more image{
+  width:36rpx;
+  height:36rpx;
+  vertical-align:-8rpx;
+}
+.result .btn{
+  width:100%;
+  height:70rpx;
+  padding:20rpx 0;
+  background:rgba(0,0,0,0.7);
+  /* position:fixed;
+  bottom:0; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* z-index: 10; */
+}
+/* .result .btn cover-view{
+  width:260rpx;
+  line-height:70rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  font-size:32rpx;
+  color:#fff;
+}
+.result .btn .share {
+  border:none;
+  background:#4ECB73;
+  color:#fff;
+}
+.result .btn .again{
+  line-height:64rpx;
+  border:2rpx solid #fff;
+} */
+.result .btn view{
+  width:260rpx;
+  line-height:70rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  font-size:32rpx;
+  color:#fff;
+}
+.result .btn .share button{
+  border:none;
+  background:#4ECB73;
+  font-size:32rpx;
+  color:#fff;
+  line-height:70rpx;
+}
+.result .btn .again{
+  line-height:68rpx;
+  border:1rpx solid #fff;
+}
+.pie .bg{
+  width:100%;
+  height:20rpx;
+  background:#f5f5f5;
+}
+.pie .perTax{
+  width:100%;
+  height:640rpx;
+}
+.pie .detail{
+  padding-bottom:68rpx;
+}
+.pie .detail .title,.pie .detail .cont{
+  width:80%;
+  margin:0 auto;
+  text-align: center;
+  display: flex;
+}
+.pie .detail .title{
+  font-size:30rpx;
+  color:#909399;
+}
+.pie .detail .cont{
+  font-size:28rpx;
+  color:#303133;
+  margin-top:18rpx;
+  position:relative;
+}
+.pie .detail .title view,.pie .detail .cont view{
+  flex:1;
+}
+.pie .detail .cont text{
+  position:absolute;
+  width:24rpx;
+  height:24rpx;
+  top:8rpx;
+  left:-16rpx;
+}
+.pie .contact{
+  width:100%;
+  height:144rpx;
+  background:#F5F5F5;
+  font-size:30rpx;
+  color:#4F71ED;
+  text-align:center;
+  padding-top:56rpx;
+  box-sizing: border-box;
+}

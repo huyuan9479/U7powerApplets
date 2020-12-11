@@ -1,0 +1,108 @@
+<!--pages/calculationResults/calculationResults.wxml-->
+<wxs module="numberUtil" src="../../../utils/toFixed.wxs"></wxs>
+<view class="resultBox">
+  <view class="item">
+    <text>月开票金额</text>
+    <text class="money">{{yeaAmount}}</text>
+  </view>
+  <view class="item">
+    <!-- 实际应纳税额 -->
+    <text>合计应纳税额</text>
+    <text class="money">{{actualTaxPayable}}</text>
+  </view>
+  <view class="item">
+    <text>全部赋税率</text>
+    <text class="money">{{numberUtil.numberFormat(allTaxRate * 100) +'%'}}</text>
+  </view>
+  <view class="line"></view>
+  <view class="echarts">
+    <view class="title">有限公司&个独企业月缴税对比柱状图</view>
+    <view class="histogram">
+      <view class="legend">
+        <view>有限公司</view>
+        <view>个独企业</view>
+      </view>
+      <ec-canvas id="histogram-chart" canvas-id="company" ec="{{ ec }}"></ec-canvas>
+    </view>
+    <view class="title">个独企业扣税明细饼状图</view>
+    <view class="pieChart">
+      <ec-canvas id="pie-chart" canvas-id="company" ec="{{ ec }}"></ec-canvas> 
+    </view>
+  </view>
+  <view class="content">
+    <view class="cont tit">
+      <view class="name">项目名称</view>
+      <view>范围</view>
+      <view>实际比例</view>
+      <view>金额</view>
+    </view>
+    <view class="cont pielegend">
+      <view class="name"><text style="background:#3AA0FF"></text>增值税</view>
+      <view>0%-3%</view>
+      <view>{{addTaxRate}}%</view>
+      <view>{{valueAddedTax}}</view>
+    </view>
+    <view class="cont pielegend">
+      <view class="name"><text style="background:#4ECB73"></text>附加税</view>
+      <view>11%~14%</view>
+      <view>11%</view>
+      <view>{{surtax}}</view>
+    </view>
+    <view class="cont pielegend">
+      <view class="name"><text  style="background:#FBD337"></text>应纳税所得额</view>
+      <view>/</view>
+      <view>10%</view>
+      <view>{{taxable}}</view>
+    </view>
+    <view class="cont pielegend">
+      <view class="name"><text style="background:#435188"></text>个人所得税</view>
+      <view>5%～35%</view>
+      <view>{{proportion * 100 + '%'}}</view>
+      <view>{{personalTax}}</view>
+    </view>
+  </view>
+  <view class="sumBox">
+    <view class="sum">
+        <view class="bold">合计纳税总额</view>
+        <view class="num">{{totalTax}}</view>
+    </view>
+    <view class="sum">
+        <view class="bold">全部赋税率</view>
+        <view class="num">{{numberUtil.numberFormat(allTaxRate *100) + '%'}}</view>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="sumBox">
+    <view class="sum">
+        <view class="bold">增值税返还</view>
+        <view class="num">{{vatRefund}}</view>
+    </view>
+    <view class="sum">
+        <view class="bold">个人所得税返还</view>
+        <view class="num">{{personalReturn}}</view>
+    </view>
+    <view class="sum">
+        <view class="bold">返还总额</view>
+        <view class="num">{{totalReturn}}</view>
+    </view>
+    <view class="sum">
+        <view class="bold">实际应纳税额</view>
+        <view class="num">{{actualTaxPayable}}</view>
+    </view>
+    <view class="sum">
+        <view class="bold">实际全部赋税率</view>
+        <view class="num">{{numberUtil.numberFormat(actualTaxrate * 100) + '%'}}</view>
+    </view>
+  </view>
+  <view class="txt">
+    <view>税收返还以实际为准。</view>
+    <view>税收返还为1季度1次，前3个季度是预返，最后一个季度清算调整，返税时间一般在下半月。</view>
+  </view>
+  <view class="btn">
+    <view class="share">
+      <button open-type='share' plain="true">分享</button>
+    </view>
+    <view class="again" bindtap="again">再算一次</view>
+  </view>
+</view>
+

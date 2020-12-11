@@ -1,0 +1,128 @@
+<!--pages/personDetail/personDetail.wxml-->
+<wxs module="numberUtil" src="../../../utils/toFixed.wxs"></wxs>
+<view class="result">
+  <view class="location">
+    <image src="../../../images/city.png"></image>
+    <text>{{city}}</text>
+  </view>
+  <view class="histogram" wx:if="{{type=='52150'}}">
+    <view class="staff">
+      <ec-canvas id="staff-dom-bar" canvas-id="staff-bar" ec="{{ ec }}"></ec-canvas>
+      <view class="tit">员工实际所得</view>
+      <view class="cont">
+        <view class="number">
+          <text>{{staffBefore}}</text>
+          <text>{{staffAfter}}</text>
+        </view>
+        <view class="name">
+          <text>调整前</text>
+          <text>调整后</text>
+        </view>
+      </view>  
+    </view>
+    <view class="company">
+      <ec-canvas id="company-dom-bar" canvas-id="company-bar" ec="{{ ec }}"></ec-canvas>
+      <view class="tit">企业实际负担</view>
+      <view class="cont">
+        <view class="number">
+          <text>{{companyBefore}}</text>
+          <text>{{companyAfter}}</text>
+        </view>
+        <view class="name">
+          <text>调整前</text>
+          <text>调整后</text>
+        </view>
+      </view> 
+    </view> 
+  </view>
+  <view class="line" wx:if="{{type=='52150'}}"></view>
+  <view wx:if="{{type!='52150'}}">
+    <view class="wages" wx:for="{{detailList}}" wx:key="{{index}}">
+      <view class="name">{{item.name}}</view>
+      <view class="info title">
+        <view>员工所得</view>
+        <view>税前工资</view>
+        <view>企业负担</view>
+      </view>
+      <view class="info">
+        <view>{{item.staffNormalCost}}</view>
+        <view>{{item.selectedRadix}}</view>
+        <view>{{item.companyNormalCost}}</view>
+      </view>
+      <!-- <view class="info">
+        <view>{{item.selectedRadix}}</view>
+        <view>{{item.staffSelectedCost}}</view>
+        <view>{{item.companySelectedCost}}</view>
+      </view>
+      <view class="info">
+        <view>前后对比</view>
+        <view class="green">{{numberUtil.numberFormat(item.selectedRadix - item.normalRadix)}}</view>
+        <view class="orange">{{numberUtil.numberFormat(item.staffSelectedCost - item.staffNormalCost)}}</view>
+        <view class="green">{{numberUtil.numberFormat(item.companySelectedCost - item.companyNormalCost)}}</view>
+      </view> -->
+    </view>
+  </view>
+  <view  wx:else>
+    <view class="wages" wx:for="{{detailList}}" wx:key="{{index}}">
+      <view class="info title">
+        <view class="name">{{item.name}}</view>
+        <view>员工所得</view>
+        <view>税前工资</view>
+        <view>企业负担</view>
+      </view>
+      <view class="info">
+        <view class="tit">调整前</view>
+        <view>{{item.staffNormalCost}}</view>
+        <view>{{item.normalRadix}}</view>
+        
+        <view>{{item.companyNormalCost}}</view>
+      </view>
+      <view class="info">
+        <view class="tit">调整后</view>
+        <view>{{item.staffSelectedCost}}</view>
+        <view>{{item.selectedRadix}}</view>
+        <view>{{item.companySelectedCost}}</view>
+      </view>
+      <view class="info">
+        <view class="tit">前后对比</view>
+        <view class="green">{{numberUtil.numberFormat(item.staffSelectedCost - item.staffNormalCost)}}</view>
+        <view class="orange">{{numberUtil.numberFormat(item.selectedRadix - item.normalRadix)}}</view>
+        <view class="green">{{numberUtil.numberFormat(item.companySelectedCost - item.companyNormalCost)}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="bg"></view>
+  <view class="perTax"><ec-canvas id="staff-dom-pie" canvas-id="staffPie" ec="{{ ec }}"></ec-canvas></view>
+  <view class="detail">
+    <view class="title">
+      <view>项目名称</view>
+      <view>比例</view>
+      <view>金额</view>
+    </view>
+    <view class="cont"  wx:for="{{staffPie}}" wx:key="{{index}}">
+      <view>{{item.name}}</view>
+      <view>{{numberUtil.numberFormat(item.value / totalMoney * 100)}}%</view>
+      <view>{{numberUtil.numberFormat(item.value)}}</view>
+      <text style="background:{{item.bg}}"></text>
+    </view>
+  </view>
+  <view class="bg"></view>
+  <view class="perTax"><ec-canvas id="company-dom-pie" canvas-id="companyPie" ec="{{ ec }}"></ec-canvas></view>
+  <view class="detail">
+    <view class="title">
+      <view>项目名称</view>
+      <view>比例</view>
+      <view>金额</view>
+    </view>
+    <view class="cont" wx:for="{{companyPie}}" wx:key="{{index}}">
+      <view>{{item.name}}</view>
+      <view>{{numberUtil.numberFormat(item.value / companyAfter * 100)}}%</view>
+      <view>{{numberUtil.numberFormat(item.value)}}</view>
+      <text style="background:{{item.bg}}"></text>
+    </view>
+  </view>
+  <view class="contact">
+  <!-- <text>联系我们</text> -->
+  </view>
+</view>
+

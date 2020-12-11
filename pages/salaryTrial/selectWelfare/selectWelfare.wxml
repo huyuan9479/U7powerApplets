@@ -1,0 +1,17 @@
+<!--pages/selecctWelfare/selecctWelfare.wxml-->
+<view class="selectSS">
+  <view class="location">
+    <image src="../../../images/city.png"></image>
+    <text>{{city}}</text>
+  </view>
+  <view class="project">
+    <view class="item" wx:for="{{list}}" wx:key="{{item.priority}}" data-itemCode="{{item.itemCode}}" data-index="{{index}}" bindtap="clickItem">
+      <view class="name">{{item.itemName}}</view>
+      <view class="icon">
+        <icon type="success" color="#4F77F0" wx:if="{{item.checked}}" />
+        <view class="circle" wx:else></view>
+      </view>
+    </view>
+  </view>
+  <view class="nextBtn" bindtap="setWelfare">下一步</view>
+</view>
